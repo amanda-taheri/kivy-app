@@ -1,0 +1,98 @@
+MDFloatLayout:
+	MDCard:
+		size_hint: 0.45 , 0.8
+		pos_hint: {'center_x': 0.5 , 'center_y': 0.5}
+		elevation: 10
+		padding: 25
+		spacing: 25
+		orientation: 'vertical'
+		Carousel:
+			id: slide
+			MDFloatLayout:
+				MDLabel:
+					id: date_label
+					pos_hint: {'center_x': 0.59 , 'center_y': 0.4}
+					text: "Please don't choose fridays "
+				MDRaisedButton:
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.5}
+					text: "Pick your date"
+					on_release: app.show_date_picker()
+
+				MDRaisedButton:
+					text: "NEXT"
+					size_hint_x: 0.8
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.2}
+					on_release: app.next()
+			MDFloatLayout:
+				MDRaisedButton:
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.5}
+					text: "pick your time"
+					on_release: app.show_time_picker()
+				MDLabel:
+					id: time_label
+					text: "We won't be able to provide services from 23 until 8 o'clock "
+					pos_hint: {'center_x': 0.59 , 'center_y': 0.4}
+				MDRaisedButton:
+					text: "PREVIOUS"
+					size_hint_x: 0.39
+					pos_hint: {'center_x': 0.3 , 'center_y': 0.2}
+					on_release: app.previous()
+				MDRaisedButton:
+					text: "Submit"
+					size_hint_x: 0.39
+					pos_hint: {'center_x': 0.7 , 'center_y': 0.2}
+					on_release: app.next1()
+			MDFloatLayout:
+				MDLabel:
+					text: "Your consultation time has been recorded.You will be contacted for further coordination."
+					bold: True
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.5}
+	MDLabel:
+		text: "Reservation Progress"
+		bold: True
+		pos_hint: {'center_x': 0.8 , 'center_y': 0.8}
+		font_style: 'H5'
+	MDLabel:
+		id: Date
+		text: "Date"
+		pos_hint: {'center_x': 0.808 , 'center_y': 0.7}
+		font_style: 'H6'
+		theme_text_color: "Custom"
+	MDIconButton:
+		id: date
+		icon: "calendar"
+		pos_hint: {'center_x': 0.34 , 'center_y': 0.65}
+		user_font_size: "35sp"
+		theme_text_color: "Custom"
+	MDProgressBar:
+		id: progress
+		size_hint_x: 0.1
+		pos_hint: {'center_x': 0.42 , 'center_y': 0.65}
+	MDLabel:
+		id: Time
+		text: "Time"
+		pos_hint: {'center_x': 0.958 , 'center_y': 0.7}
+		font_style: 'H6'
+		theme_text_color: "Custom"
+	MDIconButton:
+		id: time
+		icon: "clock"
+		pos_hint: {'center_x': 0.5 , 'center_y': 0.65}
+		user_font_size: "35sp"
+		theme_text_color: "Custom"
+	MDProgressBar:
+		id: progress1
+		size_hint_x: 0.1
+		pos_hint: {'center_x': 0.58 , 'center_y': 0.65}
+	MDLabel:
+		id: Finish
+		text: "Finish"
+		pos_hint: {'center_x': 1.12 , 'center_y': 0.7}
+		font_style: 'H6'
+		theme_text_color: "Custom"
+	MDIconButton:
+		id: Finish
+		icon: "calendar-clock"
+		pos_hint: {'center_x': 0.66 , 'center_y': 0.65}
+		user_font_size: "35sp"
+		theme_text_color: "Custom"

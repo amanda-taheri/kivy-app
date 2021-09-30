@@ -1,0 +1,161 @@
+MDFloatLayout:
+	MDCard:
+		size_hint: 0.45 , 0.8
+		pos_hint: {'center_x': 0.5 , 'center_y': 0.5}
+		elevation: 10
+		padding: 25
+		spacing: 25
+		orientation: 'vertical'
+		Carousel:
+			id: slide
+			MDFloatLayout:
+				MDTextField:
+					id:Fname
+					hint_text: "First Name"
+					size_hint_x: 0.8
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.48}
+					required: True
+					helper_text_mode: "on_error"
+					helper_text: ""
+				MDTextField:
+					id:Lname
+					hint_text: "Last Name"
+					size_hint_x: 0.8
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.34}
+					required: True
+					helper_text_mode: "on_error"
+					helper_text: ""
+				MDRaisedButton:
+					text: "NEXT"
+					size_hint_x: 0.8
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.2}
+					on_release: app.next()
+			MDFloatLayout:
+				MDTextField:
+					id:email
+					hint_text: "Email Address"
+					icon_right: "email"
+					size_hint_x: 0.8
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.48}
+					required: True
+					helper_text_mode: "on_error"
+					helper_text: ""
+				MDTextField:
+					id:phone
+					hint_text: "Phone Number"
+					icon_right: "phone"
+					size_hint_x: 0.8
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.34}
+					required: True
+					helper_text_mode: "on_error"
+					helper_text: ""
+				MDRaisedButton:
+					text: "PREVIOUS"
+					size_hint_x: 0.39
+					pos_hint: {'center_x': 0.3 , 'center_y': 0.2}
+					on_release: app.previous()
+				MDRaisedButton:
+					text: "NEXT"
+					size_hint_x: 0.39
+					pos_hint: {'center_x': 0.7 , 'center_y': 0.2}
+					on_release: app.next1()
+
+				MDLabel:
+					id:ErrorT
+					pos_hint: {'center_x': 0.6 , 'center_y': 0.09}
+					theme_text_color: "Custom"
+					text_color: 1 , 0 , 0 , 1
+					text: ""
+			MDFloatLayout:
+				MDTextField:
+					id:password
+					hint_text: "Password"
+					icon_right: "eye-off"
+					size_hint_x: 0.8
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.48}
+					password: True
+					multiline: False
+					required: True
+					helper_text_mode: "on_error"
+					helper_text: ""
+				MDTextField:
+					id:Cpass
+					hint_text: "Confirm Password"
+					icon_right: "lock-check"
+					size_hint_x: 0.8
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.34}
+					password: True
+					required: True
+					helper_text_mode: "on_error"
+					helper_text: ""
+				MDRaisedButton:
+					text: "PREVIOUS"
+					size_hint_x: 0.39
+					pos_hint: {'center_x': 0.3 , 'center_y': 0.2}
+					on_release: app.previous1()
+				MDRaisedButton:
+					text: "SUBMIT"
+					size_hint_x: 0.39
+					pos_hint: {'center_x': 0.7 , 'center_y': 0.2}
+					on_release: app.submit()
+
+				MDLabel:
+					id:ErrorP
+					pos_hint: {'center_x': 0.6 , 'center_y': 0.09}
+					theme_text_color: "Custom"
+					text_color: 1 , 0 , 0 , 1
+					text: ""
+
+			MDFloatLayout:
+				MDLabel:
+					text: "Thanks for trusting us , write your email address as username"
+
+	MDLabel:
+		text: "SignUp From"
+		bold: True
+		pos_hint: {'center_x': 0.88 , 'center_y': 0.8}
+		font_style: 'H4'
+	MDLabel:
+		id: Name
+		text: "Name"
+		pos_hint: {'center_x': 0.808 , 'center_y': 0.7}
+		font_style: 'H6'
+		theme_text_color: "Custom"
+	MDIconButton:
+		id: name
+		icon: "numeric-1-circle"
+		pos_hint: {'center_x': 0.34 , 'center_y': 0.65}
+		user_font_size: "35sp"
+		theme_text_color: "Custom"
+	MDProgressBar:
+		id: progress
+		size_hint_x: 0.1
+		pos_hint: {'center_x': 0.42 , 'center_y': 0.65}
+	MDLabel:
+		id: Contact
+		text: "Contact"
+		pos_hint: {'center_x': 0.958 , 'center_y': 0.7}
+		font_style: 'H6'
+		theme_text_color: "Custom"
+	MDIconButton:
+		id: contact
+		icon: "numeric-2-circle"
+		pos_hint: {'center_x': 0.5 , 'center_y': 0.65}
+		user_font_size: "35sp"
+		theme_text_color: "Custom"
+	MDProgressBar:
+		id: progress1
+		size_hint_x: 0.1
+		pos_hint: {'center_x': 0.58 , 'center_y': 0.65}
+	MDLabel:
+		id: Submit
+		text: "Submit"
+		pos_hint: {'center_x': 1.12 , 'center_y': 0.7}
+		font_style: 'H6'
+		theme_text_color: "Custom"
+	MDIconButton:
+		id: submit
+		icon: "numeric-3-circle"
+		pos_hint: {'center_x': 0.66 , 'center_y': 0.65}
+		user_font_size: "35sp"
+		theme_text_color: "Custom"

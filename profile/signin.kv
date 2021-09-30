@@ -1,0 +1,73 @@
+Screen:
+	MDCard:
+		elevation: 10
+		orientation: 'vertical'
+		size_hint: None , None
+		size: 300 , 400
+		pos_hint: {'center_x': 0.5 , 'center_y': 0.5 }
+		padding: 25
+		spacing: 25
+		Carousel:
+			id: slide
+			MDFloatLayout:
+
+				MDLabel:
+					id: welcome_label
+					text: 'Welcome'
+					size_hint_y: None
+					halign: 'center'
+					font_size: 40
+					height: self.texture_size[1]
+					padding_y: 15
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.9}
+
+				MDTextField:
+					id: email
+					helper_text: ""
+					required: True
+					helper_text_mode: "on_error"
+					hint_text: 'username'
+					icon_right: 'account'			
+					font_size: 18
+					width: 200
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.65}
+					size_hint_x: 0.8
+
+				MDTextField:
+					id: password
+					helper_text: ""
+					helper_text_mode: "on_error"
+					required: True
+					hint_text: 'password'
+					icon_right: 'eye-off'
+					font_size: 18
+					size_hint_x: 0.8
+					width: 200
+					password: True
+					pos_hint: {'center_x': 0.5 , 'center_y': 0.50}
+
+				MDRoundFlatButton:
+					text: 'CLEAR'
+					font_size: 12
+					pos_hint: {'center_x': 0.3 , 'center_y': 0.2}
+					on_release: app.clear()
+
+				MDRoundFlatButton:
+					text: 'LOGIN'
+					font_size: 12
+					pos_hint: {'center_x': 0.7 , 'center_y': 0.2}
+					on_release: app.logger()
+				Widget:
+					size_hint_y: None
+					height: 10
+
+				MDLabel:
+					id: ErrorL
+					text: ''
+					pos_hint: {'center_x': 0.6 , 'center_y': 0.08}
+
+			MDFloatLayout:
+				MDLabel:
+					pos_hint:{"x": 0.1, "top":0.9}
+					size_hint:0.8, 0.2
+					text: "signed in successfully" 

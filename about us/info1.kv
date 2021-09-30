@@ -1,0 +1,49 @@
+<MySwiper@MDSwiperItem>
+
+MDScreen:
+
+	MDToolbar:
+		id: toolbar
+		title: "Hippocampus_sabz"
+		elevation: 10
+		pos_hint: {"top": 1}
+	MDSwiper:
+		id: swiper
+		size_hint_y: None
+		height: root.height - toolbar.height - dp(80)
+		y: root.height - self.height - toolbar.height - dp(20)
+
+
+		MDSwiperItem:
+			FitImage:
+				source: "img/amy.PNG"
+				radius: [20,]
+
+		MDSwiperItem:
+			FitImage:
+				source: "img/psycho.PNG"
+				radius: [20,]
+		MDSwiperItem:
+			FitImage:
+				source: "img/diet.PNG"
+				radius: [20,]
+		MDSwiperItem:
+			FitImage:
+				source: "img/chem.PNG"
+				radius: [20,]
+		MDSwiperItem:
+			FitImage:
+				source: "img/eng.PNG"
+				radius: [20,]
+		MDSwiperItem:
+			FitImage:
+				source: "img/lit.PNG"
+				radius: [20,]
+	BoxLayout:
+		orientation: 'horizontal'
+		MDRaisedButton:
+			text: "Previous"
+			on_release: if swiper.get_current_index() > 0 :swiper.set_current(swiper.get_current_index()-1)
+		MDRaisedButton:
+			text: "Next"
+			on_release: if swiper.get_current_index() < len(swiper.get_items())-1 : swiper.set_current(swiper.get_current_index()+1)
